@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
   build:
-    runs-on: ${{ matrix.os }}
+    runs-on: '${{ matrix.os }}'
     strategy:
       matrix:
         os: [ubuntu-latest, macos-14, windows-lates]
@@ -14,4 +14,5 @@ jobs:
       uses: actions/setup-python@v5
       with:
         python-version: ${{ matrix.py-version }}
+
 
